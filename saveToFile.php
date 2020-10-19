@@ -1,4 +1,6 @@
 <?php 
+    // include all configs
+    require_once __DIR__ . '/configs/path.config.php';
     $noteText = $_POST['noteText'];
     $deleteOption = $_POST['date'];
     $pass = $_POST['pass'];
@@ -48,8 +50,8 @@
         'pass'=>($pass == null ?null:$pass)
     ];
     
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/encrypt.php';
+    require_once ENCRYPT;
     $pass = $dataToFile['pass'];
     $encodedData = json_encode($dataToFile);
-    require_once $_SERVER['DOCUMENT_ROOT'] .'/FileNaming.php';
+    require_once ROOT .'/FileNaming.php';
     file_put_contents($filePath,$encodedData);

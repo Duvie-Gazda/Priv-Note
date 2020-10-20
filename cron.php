@@ -1,15 +1,15 @@
 <?php 
     // get folder (all filies and links names)
-    $filesArr = scandir(__DIR__ . '/storage');
+    $filesArr = scandir($_SERVER['DOCUMENT_ROOT'] . '/storage');
     // delete ./ and ../
     array_shift($filesArr);
     array_shift($filesArr);
     foreach($filesArr as $file){
         // add to fileName path to file 
-        $filePath  = __DIR__ . '/storage/'.$file;
+        $filePath  = $_SERVER['DOCUMENT_ROOT'] . '/storage/'.$file;
         // decode data
         $data = json_decode(file_get_contents($filePath));
-        // require_once __DIR__. '/decrypt.php';
+        // require_once $_SERVER['DOCUMENT_ROOT']. '/decrypt.php';
         if(isset($data->deleteTime)){
             // get date 
             $nowTime = getdate();

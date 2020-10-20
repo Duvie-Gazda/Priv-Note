@@ -24,11 +24,12 @@
                 unlink($filePath);
             }
             $year = $data->deleteTime->year == date('Y');
+            echo 'year'.$year. '<br>';
             if($month && $year){
                 unlink($filePath);
             }
             // check if days in MONTH is not smaller than day to delete
-            $month = ($data->deleteTime->moth == date('n')) && $year;
+            $month = ($data->deleteTime->month == date('n')) && $year;
             if($month&&$day){
                 unlink($filePath);
             }
@@ -38,7 +39,7 @@
                 unlink($filePath);
             }
             // check if minutes in HOUR is not smaller than minute to delete
-            $hour = ($data->deleteTime->hour == $nowTime['hours']) && $day;
+            $hour = ($data->deleteTime->hours == $nowTime['hours']) && $day;
             if($hour&&$minute){
                 unlink($filePath);
             }

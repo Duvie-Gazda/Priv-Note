@@ -1,4 +1,4 @@
-<?php 
+<?php
     $noteText = $_POST['noteText'];
     $deleteOption = $_POST['date'];
     $pass = $_POST['pass'];
@@ -35,6 +35,7 @@
         $plusDay = ($plusDay + $nowDate['mday'])-$daysInMonth;
         $nowDate['mday'] = 0;
     }
+
     $dataToFile = [
         'deleteOptions'=> $deleteOption,
         'deleteTime' => [
@@ -45,11 +46,15 @@
             'minutes' => ($nowDate['minutes'] + $plusMinute),
         ],
         'noteText' => $noteText,
-        'pass'=>($pass == null ?null:$pass)
+        'pass'=>($pass == null ?null:$pass),
     ];
-    
+    // cript all data
     require_once __DIR__ . '/encrypt.php';
+    // update $pass (because now it have to be cripted)
     $pass = $dataToFile['pass'];
+    // encode to json
     $encodedData = json_encode($dataToFile);
+    // generate name
     require_once __DIR__ .'/FileNaming.php';
+    // write to file .json
     file_put_contents($filePath,$encodedData);

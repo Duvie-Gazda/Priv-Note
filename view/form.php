@@ -5,6 +5,7 @@ Write please your new note:<br>
     <textarea name="noteText" form="sendNote" id="noteText" cols="30" rows="10"></textarea>
     <br>
     <div id="hiddenOnForm" style="display:block;">
+        <br>
         Delete note:
         <select name="date" id="date" id="sendNote">
             <option  value="standart" hidden>Choose</option>
@@ -16,10 +17,14 @@ Write please your new note:<br>
         </select>
         <br>
         If you choose after open note will be saved for 3 minutes
-        <br>
+        <br><br>
         Pass is not important
         <br>
         <input type="password" name="pass" id="pass">
+        <br><br>
+        Enter email to send your link 
+        <input type="email" name="emailLink" id="emailLink">
+
     </div>
     <!-- <div id="hButton">Extra options</div> -->
     <input type="submit" value="Ok" name="submit">

@@ -47,9 +47,8 @@
         'noteText' => $noteText,
         'pass'=>($pass == null ?null:$pass)
     ];
-    
-    require_once __DIR__ . '/encrypt.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/extraFunc/encrypt.php';
     $pass = $dataToFile['pass'];
     $encodedData = json_encode($dataToFile);
-    require_once __DIR__ .'/FileNaming.php';
+    require_once $_SERVER['DOCUMENT_ROOT']  .'/extraFunc/FileNaming.php';
     file_put_contents($filePath,$encodedData);

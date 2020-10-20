@@ -7,7 +7,7 @@
     <br>
     <div id="hiddenOnForm" class="hide">
         Delete note:
-        <select name="date" id="date" id="sendNote">
+        <select name="date" id="date">
             <option  value="standart" hidden>Choose</option>
             <option value="afterOpen">After open</option>
             <option value="after2Minute">After 2 minute</option>

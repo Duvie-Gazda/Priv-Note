@@ -3,6 +3,7 @@ $('#moreOptions').on("click", function(){
         $('#hiddenOnForm').removeClass('hide');
     }else{
         $('#hiddenOnForm').addClass('hide');
+        document.getElementById('pass').value = '';
+        $('#date').prop('selectedIndex', 0);
     }
-
   });

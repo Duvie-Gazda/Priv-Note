@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a86512;
+}
+body .error-container {
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(194, 59, 59, 0.747);
+  border-radius: 15px;
+}
+body .container {
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(96, 214, 92, 0.747);
+  border-radius: 15px;
+}
+body .data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .data-container .data {
+  color: saddlebrown;
+  font-size: 25px;
+}
+body .extra-data-container .extra-data {
+  color: #ec7927;
+}
+body .extra-data-container show {
+  color: salmon;
+  font-size: 20px;
+}
+body .link {
+  color: saddlebrown;
+}
+body .error {
+  color: red;
+}

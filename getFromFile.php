@@ -1,16 +1,17 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/view/header.php'?>
 <?php
     /*
         1. if get - check if there is some pass. if no - open file
         2. if post - check if pass is right. if yes - open file. if no - reload page with all data
                 require_once $_SERVER['DOCUMENT_ROOT'] . '/view/formPass.php';
         3. if file name is not right - write message
+        4. if $_GET['er'] is. write error
 
         funcitons:
             deleteFile()
             showData()
     */ 
     require_once $_SERVER['DOCUMENT_ROOT'] . '/functions.php';
-
     if(isset($_GET['fn'])){
         $fileName = $_GET['fn'];
         $filePath = $_SERVER['DOCUMENT_ROOT'] . '/storage/'.$fileName.'.json';
@@ -52,7 +53,7 @@
                 deleteFileByCondition($data,$filePath);
             }
             else{
-                echo "<script>window.location = '/getFromFile.php?fn=".$fileName."'</script>";
+                echo "<script>window.location = '/getFromFile.php?fn=$fileName&er=$textError'</script>";
             }
         }else{
             // if file is not exist write error
@@ -61,3 +62,9 @@
             exit;
         }
     }
+    if(isset($_GET['er'])){
+        $textError = 'Pass is not right!';
+        require_once $_SERVER['DOCUMENT_ROOT'] .'/view/error.php';
+    }
+?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/view/footer.php'?>

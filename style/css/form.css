@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .forma {
+  margin-top: 90px;
+  margin-bottom: 20px;
+}
+body .formPass {
+  font-size: 30px;
+}
+body .formPass input[type=text], body .formPass select, body .formPass input[type=password], body .formPass textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+body .formPass input[type=submit], body .formPass input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+body .formPass input[type=submit]:hover {
+  background-color: #45a049;
+}
+body .form {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "textArea textArea" "more more" "submit moreOptions";
+  grid-template-columns: 200px 200px;
+}
+body .form #noteText {
+  grid-area: textArea;
+}
+body .form #moreOptions {
+  margin: 10px;
+  padding: 10px;
+  grid-area: moreOptions;
+}
+body .form #hiddenOnForm {
+  grid-area: more;
+}
+body .form #submit {
+  margin: 10px;
+  padding: 10px;
+  grid-area: submit;
+}
+body .form input[type=text], body .form select, body .form input[type=password], body .form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+body .form input[type=submit], body .form input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body .form input[type=submit]:hover {
+  background-color: #45a049;
+}

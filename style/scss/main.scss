@@ -1,0 +1,41 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    color: rgb(168, 101, 18);
+    .error-container{
+        padding: 30px;
+        box-shadow: 0 0 20px rgba(194, 59, 59, 0.747);
+        border-radius: 15px;
+    }
+    .container{
+        padding: 30px;
+        box-shadow: 0 0 20px rgba(96, 214, 92, 0.747);
+        border-radius: 15px;
+    }
+    .data-container{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        .data{
+            color: saddlebrown;
+            font-size: 25px;
+        }
+    }
+    .extra-data-container{
+        .extra-data{
+            color: rgb(236, 121, 39);
+        }
+        show{
+            color: salmon;
+            font-size: 20px;
+        }
+    }
+    .link{
+        color: saddlebrown;
+    }
+    .error{
+        color: red;
+    }
+}

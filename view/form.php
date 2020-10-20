@@ -1,10 +1,11 @@
-<link rel="stylesheet" href="../css/form.css">
-Write please your new note:<br>
-(In standart options your note will be saved for 5 minutes)
-<form action="../index.php" method="POST" id="sendNote">
+<link rel="stylesheet" href="../style/css/form.css">
+<div class="forma">
+    <h1 class="no-padding no-margin">Write please your new note:</h1><br>
+    <h5 class="no-padding no-margin">(In standart options your note will be saved for 5 minutes)</h5>
+    <form action="../index.php" method="POST" id="sendNote" class="form">
     <textarea name="noteText" form="sendNote" id="noteText" cols="30" rows="10"></textarea>
     <br>
-    <div id="hiddenOnForm" style="display:block;">
+    <div id="hiddenOnForm" class="hide">
         Delete note:
         <select name="date" id="date" id="sendNote">
             <option  value="standart" hidden>Choose</option>
@@ -22,6 +23,9 @@ Write please your new note:<br>
         <input type="password" name="pass" id="pass">
     </div>
     <!-- <div id="hButton">Extra options</div> -->
-    <input type="submit" value="Ok" name="submit">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <input type="submit" value="Ok" name="submit" id="submit" class="no-margin">
+    <input type="button" value="More Options" id="moreOptions">
 </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="/view/js/form.js"></script>

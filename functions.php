@@ -4,7 +4,7 @@
                 $extraData = '<br>Please copy your letter if you want to save it. Becouse after reloading it will be deleted';
             }else{
                 $time = $data->deleteTime;
-                $extraData = "<br>Your note will be deleted at <show>$time->year.$time->month.$time->mday $time->hours:$time->minutes</show>";
+                $extraData = "<br>Your note will be deleted after <show>$time->year.$time->month.$time->mday $time->hours:$time->minutes</show>";
             }
             require_once $_SERVER['DOCUMENT_ROOT'].'/view/showData.php';
         }

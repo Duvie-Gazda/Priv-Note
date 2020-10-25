@@ -4,7 +4,7 @@
     const STORAGE = ROOT . 'storage/';
     const STYLE = ROOT . 'style/';
     const HEADER = VIEW . 'header.php';
-    const FOOTER = VIEW.'foooter.php';
+    const FOOTER = VIEW.'footer.php';
     const FUNCTIONS = ROOT.'functions.php';
     const ERROR = VIEW . 'error.php';
     const JAVASCRIPT = VIEW . 'js/';
